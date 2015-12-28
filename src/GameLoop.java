@@ -10,10 +10,16 @@ public class GameLoop
 	long lastFpsTime;
 	int fps;
 	Boolean gameRunning = false;
+	GameDraw canvas;
 	
 	public GameLoop()
 	{
 		gameRunning = true;
+	}
+	
+	public void setCanvas(GameDraw g)
+	{
+		canvas = g;
 	}
 	
 	public void loop()
@@ -34,13 +40,15 @@ public class GameLoop
 			if(lastFpsTime >= NANOSECOND)
 			{
 				System.out.println("(FPS: " + fps + " )");
+				canvas.x = fps;
 				lastFpsTime = 0;
 				fps = 0;
+				
 			}
 			
 			// Game Updates
 			// Draw Game
-			
+			canvas.repaint();
 			// Puts the thread to sleep by a certain amount to achieve our Target FPS
 			try
 			{
