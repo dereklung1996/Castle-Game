@@ -40,7 +40,7 @@ public class GameLoop
 			if(lastFpsTime >= NANOSECOND)
 			{
 				System.out.println("(FPS: " + fps + " )");
-				canvas.x = fps;
+				canvas.fps = String.valueOf(fps);
 				lastFpsTime = 0;
 				fps = 0;
 				
