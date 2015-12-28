@@ -22,6 +22,7 @@ public class GameGUI extends JFrame
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				setTitle("Game");
+				setLocationRelativeTo(null);
 				setResizable(false);
 				setVisible(true);
 			}
