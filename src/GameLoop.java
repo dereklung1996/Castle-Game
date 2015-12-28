@@ -44,8 +44,6 @@ public class GameLoop
 			// Puts the thread to sleep by a certain amount to achieve our Target FPS
 			try
 			{
-				System.out.println(lastLoopTime);
-				System.out.println(System.nanoTime());
 				Thread.sleep((lastLoopTime - System.nanoTime() + OPTIMAL_TIME) / 1000000) ;
 			}
 			catch (InterruptedException e)
